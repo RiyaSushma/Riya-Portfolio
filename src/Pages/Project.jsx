@@ -104,7 +104,7 @@ function Project() {
                 mt-4">
                             A Small Selection of Recent Projects
                         </h3>
-                        <div className='grid col-span-full xl:grid-cols-3 xxl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 items-center justify-center relative z-10 gap-5'>
+                        <div className='grid col-span-full xl:grid-cols-3 xxl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 items-center justify-center relative z-70 gap-5'>
                             {currentSection.map(({ id, title, hover_title, img, className = "text-white", containerClassName="", technologies, link, description, screenshots }) => (
                                 <div key={id} onClick={() => setActiveModalProjectId(id)}>
                                     <PinContainer key={id} id={id} hover_title={hover_title} img={img} className={className} containerClassName={containerClassName} link={link} technologies={technologies} screenshots={screenshots} title={title} description={description}>

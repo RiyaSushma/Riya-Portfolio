@@ -8,6 +8,7 @@ function Footer() {
   const options =[
     "app",
     "about",
+    "expertise",
     "project",
     "contact",
   ];

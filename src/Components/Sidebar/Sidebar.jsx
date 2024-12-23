@@ -24,8 +24,22 @@ function Sidebar() {
         dispatch(toggle_mode());
     }
 
-    const handleSectionChange = (navSection) => {
+    const handleSectionChange = (navSection, id) => {
         const section = document.getElementById(navSection);
+        const icon = document.getElementById(id);
+        const iconList = document.querySelector(".icon-list").childNodes;
+
+        console.log(iconList);
+
+        iconList.forEach((icons) => {
+            const elementId = icons.getAttribute('id');
+            console.log(id);
+            if(document.getElementById(elementId).classList?.contains("active")) {
+                document.getElementById(elementId).classList.remove('active');
+            }
+        })
+
+        icon.classList.add('active');
 
         if(section) {
             section.scrollIntoView({ behavior: "smooth" })
@@ -34,29 +48,29 @@ function Sidebar() {
 
     return (
         <div className='border dark:border-blue-50 border-black flex lg:flex-col items-center justify-center rounded-3xl dark:text-white text-black bg-white dark:bg-black h-auto'>
-            <div className='flex flex-col p-3 gap-4'>
-                <button onClick={() => handleSectionChange("app")}>
+            <ul className='flex flex-col p-3 gap-4 icon-list'>
+                <li id="house-icon" onClick={() => handleSectionChange("app", "house-icon")}>
                     <HouseIcon/>
-                </button>
-                <button onClick={() => handleSectionChange("about")} className='dark:bg-black bg-white'>
+                </li>
+                <li id="info-icon" onClick={() => handleSectionChange("about", "info-icon")} className='dark:bg-black bg-white'>
                     <InfoIcon/>
-                </button>
-                <button onClick={() => handleSectionChange("project")}>
+                </li>
+                <li id="terminal-icon" onClick={() => handleSectionChange("project", "terminal-icon")}>
                     <TerminalIcon/>
-                </button>
-                <button onClick={() => handleSectionChange("contact")}>
+                </li>
+                <li id='phone-icon' onClick={() => handleSectionChange("contact", "phone-icon")}>
                     <PhoneIcon/>
-                </button>
-                <div
+                </li>
+                <li
                     className="rounded-full lg:h-12 lg:w-12 md:h-10 md:w-10 sm:h-8 sm:w-8 s:h-7 s:w-7 xs:h-7 xs:w-7 border-2 border-dashed rotating-circle items-center justify-center flex hover:border-purple-500 dark:border-white border-black">
-                        <div className="stationary-icon w-full h-full flex items-center justify-center" onClick={handleMode}>
+                        <div className="stationary-icon w-full h-full flex items-center justify-center" id='mode-icon' onClick={handleMode}>
                             {darkMode ? 
                             <DarkModeIcon
                                 className="text-white hover:text-purple-500" /> : 
                             <LightModeIcon className="text-black hover:text-purple-500"/>}
                         </div>
-                    </div>
-            </div>
+                    </li>
+            </ul>
         </div>
     );
 }

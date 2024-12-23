@@ -15,7 +15,7 @@ import Marquee from "react-fast-marquee";
 
 function Expertise() {
   return (
-    <div className="flex mt-36 w-full" id="expertise">
+    <div className="flex mt-36 w-full min-h-screen items-center" id="expertise">
             <section className="flex flex-col text-black dark:text-white h-full overflow-hidden items-center justify-center">
                 <h3 className="font-bold lg:text-xl text-center md:text-lg sm:text-lg s:text-lg xs:text-lg xxl:text-xl dark:text-white text-black  p-6">
                     Expertise
@@ -24,84 +24,108 @@ function Expertise() {
                     <div className="flex rounded-2xl items-center w-5/6">
                         <Marquee className="marquee-container" speed={70} pauseOnClick={true} pauseOnHover={true}>
                             <div className="flex gap-10 items-center p-4">
-                                <div className="flex flex-col items-center justify-center w-40 border dark:border-white border-black dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-cyan-800 dark:hover:bg-cyan-800">
-                                    <RiReactjsLine className="text-7xl text-cyan-500"/> 
-                                    <h1 className="text-center font-bold text-xl pl-1 pr-1">React</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-green-900 dark:hover:bg-green-900 items-center">
-                                    <SiMongodb className="text-7xl text-green-500"/>
-                                    <h1 className="text-center font-bold text-xl">Mongodb</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-green-800 dark:hover:bg-green-800 items-center">
-                                    <FaNodeJs className="text-7xl text-green-500"/>
-                                    <h1 className="text-center font-bold text-xl">Node Js</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-yellow-600 dark:hover:bg-yellow-600 items-center">
-                                    <svg width="5rem" height="5rem">
-                                        <defs>
-                                            <linearGradient id="gradient-decor" gradientTransform="rotate(360)">
-                                                <stop offset="50%" stopColor="yellow"/>
-                                                <stop offset="50%" stopColor="gold"/>
-                                            </linearGradient>
-                                        </defs>
-                                        <IconContext.Provider value={{ attr: { fill: "url('#gradient-decor')" } }}>
-                                            <IoLogoJavascript className="text-7xl" />
-                                        </IconContext.Provider>
-                                    </svg>
-                                    <h1 className="text-center font-bold text-xl">Javascript</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-purple-400 dark:hover:bg-purple-400 items-center">
-                                    <FaBootstrap className="text-7xl text-purple-600"/>
-                                    <h1 className="text-center font-bold text-xl">Bootstrap</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-gray-600 dark:hover:bg-gray-600 items-center">
-                                    <SiExpress className="text-7xl dark:text-white text-black"/>
-                                    <h1 className="text-center font-bold text-xl">Express Js</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-red-200 dark:hover:bg-red-200 items-center">
-                                    <svg width="5rem" height="5rem">
-                                        <defs>
-                                            <linearGradient id="html-gradient" gradientTransform="rotate(360)">
-                                                <stop offset="70%" stopColor="red"/>
-                                                <stop offset="50%" stopColor="orange"/>
-                                            </linearGradient>
-                                        </defs>
-                                        <IconContext.Provider value={{ attr: { fill: "url('#html-gradient')" } }}>
-                                            <FaHtml5 className="text-7xl"/>
-                                        </IconContext.Provider>
-                                    </svg>
-                                    <h1 className="text-center font-bold text-xl">HTML</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-blue-400 dark:hover:bg-blue-400 items-center">
-                                    <svg width="5rem" height="5rem">
-                                        <defs>
-                                            <linearGradient id="css-gradient" gradientTransform="rotate(360)">
-                                                <stop offset="70%" stopColor="blue"/>
-                                                <stop offset="50%" stopColor="lightblue"/>
-                                            </linearGradient>
-                                        </defs>
-                                        <IconContext.Provider value={{ attr: { fill: "url('#css-gradient')" } }}>
-                                            <FaCss3Alt className="text-7xl" />
-                                        </IconContext.Provider>
-                                    </svg>
-                                    <h1 className="text-center font-bold text-xl">CSS</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-purple-300 dark:hover:bg-purple-300 items-center">
-                                    <SiRedux className="text-7xl text-purple-500" />
-                                    <h1 className="text-center font-bold text-xl">Redux</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-yellow-300 dark:hover:bg-yellow-300 items-center">
-                                    <FaPython className="text-7xl text-blue-600" />
-                                    <h1 className="text-center font-bold text-xl">Python</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-blue-400 dark:hover:bg-blue-400 items-center">
-                                    <SiNumpy className="text-7xl text-blue-300"/>
-                                    <h1 className="text-center font-bold text-xl">Numpy</h1>
-                                </div>
-                                <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-yellow-300 dark:hover:bg-yellow-300 items-center">
-                                    <DiMysql className="text-7xl text-blue-500" />
-                                    <h1 className="text-center font-bold text-xl">MySql</h1>
-                                </div>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+reactjs&type=repositories" target="_blank">
+                                    <div className="flex flex-col items-center justify-center w-40 border dark:border-white border-black dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-cyan-800 dark:hover:bg-cyan-800">
+                                        <a href="/"><RiReactjsLine className="text-7xl text-cyan-500"/> </a>
+                                        <h1 className="text-center font-bold text-xl pl-1 pr-1">React</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+mongodb&type=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-green-900 dark:hover:bg-green-900 items-center">
+                                        <SiMongodb className="text-7xl text-green-500"/>
+                                        <h1 className="text-center font-bold text-xl">Mongodb</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+nodejs&type=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-green-800 dark:hover:bg-green-800 items-center">
+                                        <FaNodeJs className="text-7xl text-green-500"/>
+                                        <h1 className="text-center font-bold text-xl">Node Js</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+javascript&type=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-yellow-600 dark:hover:bg-yellow-600 items-center">
+                                        <svg width="5rem" height="5rem">
+                                            <defs>
+                                                <linearGradient id="gradient-decor" gradientTransform="rotate(360)">
+                                                    <stop offset="50%" stopColor="yellow"/>
+                                                    <stop offset="50%" stopColor="gold"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <IconContext.Provider value={{ attr: { fill: "url('#gradient-decor')" } }}>
+                                                <IoLogoJavascript className="text-7xl" />
+                                            </IconContext.Provider>
+                                        </svg>
+                                        <h1 className="text-center font-bold text-xl">Javascript</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+bootstrap&type=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-purple-400 dark:hover:bg-purple-400 items-center">
+                                        <FaBootstrap className="text-7xl text-purple-600"/>
+                                        <h1 className="text-center font-bold text-xl">Bootstrap</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+expressjs&type=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-gray-600 dark:hover:bg-gray-600 items-center">
+                                        <SiExpress className="text-7xl dark:text-white text-black"/>
+                                        <h1 className="text-center font-bold text-xl">Express Js</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+html&type=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-red-200 dark:hover:bg-red-200 items-center">
+                                        <svg width="5rem" height="5rem">
+                                            <defs>
+                                                <linearGradient id="html-gradient" gradientTransform="rotate(360)">
+                                                    <stop offset="70%" stopColor="red"/>
+                                                    <stop offset="50%" stopColor="orange"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <IconContext.Provider value={{ attr: { fill: "url('#html-gradient')" } }}>
+                                                <FaHtml5 className="text-7xl"/>
+                                            </IconContext.Provider>
+                                        </svg>
+                                        <h1 className="text-center font-bold text-xl">HTML</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+css&type=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-blue-400 dark:hover:bg-blue-400 items-center">
+                                        <svg width="5rem" height="5rem">
+                                            <defs>
+                                                <linearGradient id="css-gradient" gradientTransform="rotate(360)">
+                                                    <stop offset="70%" stopColor="blue"/>
+                                                    <stop offset="50%" stopColor="lightblue"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <IconContext.Provider value={{ attr: { fill: "url('#css-gradient')" } }}>
+                                                <FaCss3Alt className="text-7xl" />
+                                            </IconContext.Provider>
+                                        </svg>
+                                        <h1 className="text-center font-bold text-xl">CSS</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+redux-toolkit&type=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-purple-300 dark:hover:bg-purple-300 items-center">
+                                        <SiRedux className="text-7xl text-purple-500" />
+                                        <h1 className="text-center font-bold text-xl">Redux</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+python&type=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-yellow-300 dark:hover:bg-yellow-300 items-center">
+                                        <FaPython className="text-7xl text-blue-600" />
+                                        <h1 className="text-center font-bold text-xl">Python</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/search?q=owner%3ARiyaSushma+numpy&type=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-blue-400 dark:hover:bg-blue-400 items-center">
+                                        <SiNumpy className="text-7xl text-blue-300"/>
+                                        <h1 className="text-center font-bold text-xl">Numpy</h1>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/RiyaSushma?tab=repositories" target="_blank">
+                                    <div className="flex flex-col w-40 border dark:border-white border-black justify-center dark:bg-zinc-900 bg-pink-300 p-8 rounded-lg hover:bg-yellow-300 dark:hover:bg-yellow-300 items-center">
+                                        <DiMysql className="text-7xl text-blue-500" />
+                                        <h1 className="text-center font-bold text-xl">MySql</h1>
+                                    </div>
+                                </a>
                             </div>
                         </Marquee>
                     </div>

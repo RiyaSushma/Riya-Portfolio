@@ -13,6 +13,7 @@ import FloatingDiv from "../../utils/FloatingDiv.jsx";
 import Glasses from "/images/glasses.png";
 import GlassesEmoji from "/images/glassesemoji.png";
 import HumbleEmoji from "/images/humble.png";
+import Triangle from "/images/triangle.png";
 import Full_Stack_dev from "/images/full_stack.png";
 import Website_dev from "/images/website_dev.png";
 import AI_ML_dev from "/images/ai_ml.png";
@@ -117,7 +118,7 @@ export default function HomeContainer() {
         // </div>
 
         <div className="grid grid-cols-2 relative portfolio-container mt-11">
-            <section className="relative gap-2 h-full w-full">
+            <section className="gap-2 h-full w-full">
                 <div className="grid grid-col-1 lg:p-3 md:p-2 sm:p-1 xs:p-1 xl:p-3 text-black dark:text-white xxl:gap-6 xl:gap-6 lg:gap-6 md:gap-2 sm:gap-2 xs:gap-2">
                     <motion.div
                         initial={{ x: "-2%", opacity: 0 }}
@@ -139,17 +140,28 @@ export default function HomeContainer() {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
                     >
-                        <div className="flex">
-                            <div className="gradient-border">
-                                <button
+                        <div className="flex sm:mt-2 s:mt-2 xs:mt-2 md:mt-3 lg:mt-8 xl:mt-8 h-[3.35rem] border-2 rounded w-[7.62rem]">
+                            {/* <div className="rounded gradient-border"> */}
+                                {/* <button
                                     className="font-medium lg:p-3 md:p-3 sm:p-3 s:p-3 xs:p-3 lg:text-2xl md:text-xl
                     sm:text-lg s:text-lg xs:text-lg w-full flex-shrink-0 bg-purple-100 dark:bg-indigo-900 text-black dark:text-white"
                                     onClick={handleResumeDownload}
                                 >
                                     Resume
                                     <FileDownloadIcon />
+                                </button> */}
+                                <div>
+                                <button
+                                    className="gradient-border-btn"
+                                    onClick={handleResumeDownload}
+                                >
+                                    <div className="btn-text">
+                                        <h2>Resume</h2>
+                                        <FileDownloadIcon />
+                                    </div>
                                 </button>
-                            </div>
+                                </div>
+                            {/* </div> */}
                         </div>
                     </motion.div>
                     <div className="flex gap-10 bottom-1">
@@ -158,8 +170,8 @@ export default function HomeContainer() {
                     </div>
                 </div>
             </section>
-            <section className="relative h-full">
-                <div className="profile-image-container">
+            <section className="relative h-full w-full">
+                <div className="flex profile-image-container">
                     {darkMode ? (
                         <>
                             <motion.div
@@ -167,19 +179,34 @@ export default function HomeContainer() {
                                 whileInView={{ x: "-15%", opacity: 1 }}
                                 transition={{ duration: 1.2, ease: "easeOut" }}
                             >
-                                <img src={Vector3} alt="" className="xl:scale-0.69 lg:scale-0.69 s:left-3.5 xs:left-3.5 md:left-3.5 xl:-left-16 lg:-left-16 md:-left-15 s:-left-15 xs:-left-15 xl:-top-9 lg:-top-9 md:-top-3 s:-top-3 xs:-top-3 xs:w-70 s:w-70 md:w-70 transform rotate-10 object-cover block max-w-full"/>
+                                <div className="absolute top-[10rem] w-7 emoji">
+                                    <img src={HumbleEmoji}/>
+                                </div>
+                                <div className="absolute top-[10rem] w-7 stars">
+                                    <span className="star"></span>
+                                </div>
+                                <div className="absolute -top-2 w-7 triangle">
+                                    <img src={Triangle} alt=""/>
+                                </div>
+                                <div className="xs:left-3.5 md:left-3.5 xl:-left-16 lg:-left-16 md:-left-15 s:-left-15 xs:-left-15 xl:-top-9 lg:-top-9 md:-top-3 s:-top-3">
+                                    <img src={Vector3} alt="" className="xl:scale-0.69 lg:scale-0.69 s:left-3.5 xs:-top-3 xs:w-70 s:w-70 md:w-70 transform rotate-10 object-cover block max-w-full"/>
+                                </div>
                             </motion.div>
                           {/* <img src={Vector3} alt="" className="xl:scale-0.69 lg:scale-0.69 s:left-3.5 xs:left-3.5 md:left-3.5 xl:-left-16 lg:-left-16 md:-left-15 s:-left-15 xs:-left-15 xl:-top-9 lg:-top-9 md:-top-3 s:-top-3 xs:-top-3 xs:w-70 s:w-70 md:w-70 transform rotate-10"/> */}
                           {/* <img src={Vector3} alt="" className="xl:scale-0.69 lg:scale-0.69 inset-0 top-0 xs:w-70 s:w-70 md:w-70 transform h-auto rotate-10"/> */}
                           <motion.div initial={{ x: "-10%", opacity: 0 }}
                                 whileInView={{ x: "4.5%", opacity: 1 }}
                                 transition={{ duration: 1.2, ease: "easeOut" }}>
-                                <img src={Vector4} alt="" className="xl:-top-5 lg:-top-5 md:-top-1 xs:-top-0.25 s:-top-0.25 xl:scale-0.67 lg:scale-0.67 s:left-3.5 xs:left-3.5 md:left-3.5 transform -rotate-50 object-cover block max-w-full"/>
+                                <div className="xl:-top-5 lg:-top-5 md:-top-1 xs:-top-0.25 s:-top-0.25 s:left-3.5 xs:left-3.5 md:left-3.5">
+                                    <img src={Vector4} alt="" className="xl:scale-0.67 lg:scale-0.67 transform -rotate-50 object-cover block max-w-full"/>
+                                </div>
                           </motion.div>
                           <motion.div initial={{ x: "-10%", opacity: 0 }}
                                 whileInView={{ x: "30%", opacity: 1 }}
                                 transition={{ duration: 1.2, ease: "easeOut" }}>
-                            <img src={Riya} alt="" className="xl:scale-1 xl:left-28 lg:scale-1 lg:left-28 xs:scale-0.5 s:scale-0.5 s:left-0.5 xs:left-0.5 md:left-2.5 object-cover block max-w-full"/>
+                            <div className="lg:left-28 md:left-2.5 sm:mr-20">
+                                <img src={Riya} alt="" className="xl:scale-1 xl:left-28 lg:scale-1 xs:scale-0.5 s:scale-0.5 s:left-0.5 xs:left-0.5 object-cover block max-w-full"/>
+                            </div>
                           </motion.div>
                           {/* <img src={Vector4} alt="" className="xl:scale-0.67 top-8 left-16 lg:scale-0.67 transform h-auto -rotate-50"/> */}
                           {/* <img src={Riya} alt="" className="xl:scale-1 xl:left-28 lg:scale-1 lg:left-28 xs:scale-0.5 s:scale-0.5 top-11"/> */}
@@ -189,6 +216,9 @@ export default function HomeContainer() {
                         <motion.div initial={{ x: "-10%", opacity: 0 }}
                                 whileInView={{ x: "-15%", opacity: 1 }}
                                 transition={{ duration: 1.2, ease: "easeOut" }}>
+                            <div className="absolute -top-2 w-7 triangle">
+                                    <img src={Triangle} alt=""/>
+                                </div>
                             <img src={Vector1} alt="" className="xl:scale-0.69 lg:scale-0.69 s:left-3.5 xs:left-3.5 md:left-3.5 xl:-left-16 lg:-left-16 md:-left-15 s:-left-15 xs:-left-15 xl:-top-9 lg:-top-9 md:-top-3 s:-top-3 xs:-top-3 xs:w-70 s:w-70 md:w-70 transform h-full object-cover block max-w-full" />
                         </motion.div>
                         <motion.div initial={{ x: "-10%", opacity: 0 }}
@@ -207,7 +237,7 @@ export default function HomeContainer() {
                       <FloatingDiv image={Website_dev} txt1="Software" txt2="Developer" className="bg-yellow-300"/>
                     </div>
                     <div className="flex w-auto -top-7 xl:right-36 lg:right-36 md:justify-end sm:justify-end s:justify-end z-10">
-                      <FloatingDiv image={Full_Stack_dev} txt1="Full-Stack" txt2="Developer"/>
+                      <a href=""><FloatingDiv image={Full_Stack_dev} txt1="Full-Stack" txt2="Developer"/></a>
                     </div>
 
                     <div className="flex w-auto xl:top-96 xxl:top-96 lg:top-96 md:top-72 sm:top-72 xs:top-72 xl:right-36 lg:right-36 md:justify-end sm:justify-end s:justify-end z-10">

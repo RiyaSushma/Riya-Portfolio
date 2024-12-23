@@ -5,6 +5,7 @@ import useHover from "../hooks/useHover";
 import ContactContainer from "../Components/ContactContainer/ContactContainer";
 import EmailIcon from '@mui/icons-material/Email';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import BgImage from '/images/hand-shake.png';
 import { BackgroundGradient } from "../utils/backgroundGradient";
 
 function Contact() {
@@ -42,15 +43,16 @@ function Contact() {
     return (
         <div className="relative w-full inset-0 mt-16 h-full rounded-3xl" id="contact">
             <BackgroundGradient>
-            <section className="w-full max-w-full lg:px-14 md:px-8 sm:px-4 s:px-3 xs:px-3 h-full bg-zinc-900 rounded-3xl">
+            <section className="w-full max-w-full lg:px-14 md:px-8 sm:px-4 s:px-3 xs:px-3 h-full dark:bg-zinc-900 rounded-3xl">
                 <section className="w-full flex flex-col items-center justify-center text-black dark:text-white xxl:p-5 lg:p-5 md:p-3 sm:p-3 xs:p-3 s:p-3 h-full">
                     <h3 className="font-bold lg:text-xl md:text-lg sm:text-lg s:text-lg xs:text-lg xxl:text-xl dark:text-white text-black text-center mt-1 pt-3">
                         Contact Me
                     </h3>
                     <section className="grid grid-cols-2 w-full mt-3 rounded-lg sm:pl-2 s:pl-2 xs:pl-2 sm:pr-2 s:pr-2 xs:pr-2 xxl:pl-10 xxl:pr-10 xl:pl-10 xl:pr-10 lg:pl-4 lg:pr-4 sm:gap-2 s:gap-2 xs:gap-2 xxl:gap-16 lg:gap-16 md:gap-10 h-full">
                         <div className="w-11/12 mt-3 rounded-lg h-full flex flex-col items-center pb-16">
-                            <div className="flex items-center justify-center h-full text-3xl font-bold">
-                                <h3>Let's connect </h3>
+                            <div className="flex items-center justify-center h-full text-3xl font-bold relative">
+                                <img src={BgImage} className="rounded blur-[0.1rem]"/>
+                                <h3 className="z-10 absolute font-bold">Let's connect </h3>
                             </div>
                             <div className="flex justify-end">
                                 <EmailIcon/><a href="mailto:riyag0105@gmail.com?subject=Enquiry" target="_blank" className="ml-2 text-blue-500 hover:underline lg:text-base xxl:text-base xl:text-base sm:text-sm xs:text-sm s:text-sm">riyag0105@gmail.com</a>

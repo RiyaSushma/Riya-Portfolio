@@ -35,7 +35,7 @@ function Header() {
     const navigateItems = [
         {
             name: "Home",
-            url: "#home",
+            url: "#header",
             active: true
         },
         {
@@ -61,7 +61,7 @@ function Header() {
     ];
 
     return (
-        <header className="shadow w-full">
+        <header className="shadow w-full" id="header">
             <motion.div
                 initial={{ y:"60%", opacity: 0 }}
                 animate={{ y:0, opacity: 1 }}
@@ -69,7 +69,7 @@ function Header() {
             >
                 <section className="w-full max-w-full">
                 <nav className="flex justify-center text-black">
-                    <h3 className="text-black font-poppins lg:m-6 md:m-5 sm:m-3 sm:mt-6 lg:text-lg xs:text-lg s:text-lg md:text-lg sm:text-lg underline-transition dark:text-white">
+                    <h3 className="text-black font-poppins lg:m-6 md:m-5 sm:mt-8 lg:text-lg xs:text-2xl s:text-2xl md:text-3xl sm:text-2xl underline-transition dark:text-white">
                         <ProfileIcon/>
                     </h3>
                     <ul className="flex ml-auto">
@@ -94,18 +94,18 @@ function Header() {
                         }
                     </ul>
                     <div
-                        className="m-4 rounded-full lg:h-12 lg:w-12 md:h-10 md:w-10 md:mt-4 sm:mt-5 xs:mt-5 s:mt-5 sm:h-8 sm:w-8 s:h-7 s:w-7 xs:h-7 xs:w-7 border-2 border-dashed rotating-circle items-center justify-center flex hover:border-purple-500 border-black dark:border-white">
+                        className="xl:m-4 lg:m-4 sm:m-2 xs:m-2 md:m-3 rounded-full lg:h-12 lg:w-12 md:h-7 md:w-7 md:mt-4 sm:mt-5 xs:mt-5 s:mt-5 sm:h-7 sm:w-7 s:h-7 s:w-7 xs:h-7 xs:w-7 border-2 border-dashed rotating-circle items-center justify-center flex hover:border-purple-500 border-black dark:border-white">
                         <div className="stationary-icon w-full h-full flex items-center justify-center" onClick={toggleMode}>
                         {darkMode ? <DarkModeIcon
                                 className="text-white hover:text-purple-500" /> : <LightModeIcon className="text-black hover:text-purple-500"/>}
                         </div>
                     </div>
 
-                    <div className="rounded-full lg:h-16 lg:w-16 lg:mt-3 md:h-14 md:w-14 md:mt-3 sm:mt-3 s:mt-5 xs:mt-5 sm:h-12 sm:w-12 s:h-7 s:w-7 xs:h-7 xs:w-7 flex justify-center rotating-circle background-image items-center">
+                    <div className="rounded-full lg:h-16 lg:w-16 lg:mt-3 md:h-14 md:w-14 md:mt-3 sm:mt-4 s:mt-5 xs:mt-5 sm:h-7 sm:w-7 s:h-7 s:w-7 xs:h-7 xs:w-7 flex justify-center rotating-circle background-image items-center">
                         <div className="stationary-icon w-full h-full flex items-center justify-center">
                             <img
                                 src="/images/logo.png"
-                                className="lg:h-10 lg:w-10 md:h-8 md:w-8 sm:h-6 sm:w-6 s:h-5 s:w-5 xs:h-5 xs:w-5 lg:mt-1 md:mt-1 sm:mt-1 xs:mt-0.5 s:mt-0.5"
+                                className="lg:h-10 lg:w-10 md:h-8 md:w-8 sm:h-4 sm:w-4 s:h-4 s:w-4 xs:h-4 xs:w-4 lg:mt-1 md:mt-1 sm:mt-1 xs:mt-0.5 s:mt-0.5"
                             />
                         </div>
                     </div>
